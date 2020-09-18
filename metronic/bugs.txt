@@ -1,4 +1,0 @@
-1. cannot install create-react-app
-- npm cache clean --force
-
-2.

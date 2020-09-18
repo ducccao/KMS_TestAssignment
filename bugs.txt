@@ -1,0 +1,6 @@
+1. cannot install create-react-app or create-nextjs-app
+- npm cache clean --force
+
+2. className confict
+- Material UI doc - nextjs demo
+
