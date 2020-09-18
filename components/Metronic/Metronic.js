@@ -5,7 +5,7 @@ import ListMonthlySubscription from "./ListMonthlySubscription/ListMonthlySubscr
 import ListCustomer from "./ListCustomer/ListCustomer";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import classnames from "classnames";
+import cn from "classnames";
 
 let log = console.log;
 
@@ -17,17 +17,17 @@ const useStyles = makeStyles((theme) => ({
   header: {
     backgroundColor: theme.status.danger,
   },
-  spacing: {
-    padding: 20,
-  },
+
   footer: {
     backgroundColor: theme.status.danger,
   },
   main: {
     minHeight: "100vh",
     padding: "5vh 8vw",
-
     backgroundColor: "lightskyblue",
+  },
+  mb_10: {
+    marginBottom: 10,
   },
 }));
 
@@ -39,29 +39,27 @@ function Metronic() {
       {/* header */}
       {/* header */}
       {/* header */}
-      <Grid
-        item
-        xs={12}
-        className={classnames(classes.header, classes.spacing)}
-      >
+      <Grid item xs={12} className={cn(classes.header)}>
         header here
       </Grid>
       {/* main */}
       {/* main */}
       {/* main */}
-      <Grid item xs={12} className={classnames(classes.main, classes.spacing)}>
-        {/* ListMonthlySubscription */}
-        {/* ListMonthlySubscription */}
-        {/* ListMonthlySubscription */}
-        <ListMonthlySubscription></ListMonthlySubscription>
+      <Grid item xs={12} className={cn(classes.main)}>
+        {/* wrap it to spacing*/}
+        {/* wrap it to spacing*/}
+        {/* wrap it to spacing*/}
+        <Grid container spacing={3}>
+          {/* ListMonthlySubscription */}
+          {/* ListMonthlySubscription */}
+          {/* ListMonthlySubscription */}
+          <ListMonthlySubscription></ListMonthlySubscription>
 
-        {/* ListCustomer */}
-        {/* ListCustomer */}
-        {/* ListCustomer */}
-        <ListCustomer></ListCustomer>
+          {/* ListCustomer */}
+          {/* ListCustomer */}
+          {/* ListCustomer */}
+          <ListCustomer></ListCustomer>
 
-        {/* wrap it */}
-        <Grid spacing={3} container>
           {/* Statistical */}
           {/* Statistical */}
           {/* Statistical */}
@@ -76,11 +74,7 @@ function Metronic() {
       {/* footer */}
       {/* footer */}
       {/* footer */}
-      <Grid
-        item
-        xs={12}
-        className={classnames(classes.footer, classes.spacing)}
-      >
+      <Grid item xs={12} className={cn(classes.footer)}>
         footer here
       </Grid>
     </Grid>

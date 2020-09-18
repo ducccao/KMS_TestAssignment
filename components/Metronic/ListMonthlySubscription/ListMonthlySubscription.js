@@ -27,7 +27,6 @@ function ListMonthlySubscription() {
   const classes = useStyles();
   return (
     <Grid xs={12} item>
-      ListMonthlySubscription cpn
       <Grid container spacing={3}>
         <ItemMonthlySubscription></ItemMonthlySubscription>
         <ItemMonthlySubscription></ItemMonthlySubscription>

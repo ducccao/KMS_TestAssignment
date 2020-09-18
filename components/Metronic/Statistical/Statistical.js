@@ -1,5 +1,5 @@
 import React from "react";
-import WeeklyScalesStats from "./WeeklySalesStats/WeeklySalesStats";
+import WeeklySalesStats from "./WeeklySalesStats/WeeklySalesStats";
 import ListStatistical from "./ListStatistical/ListStatistical";
 import Chart from "./Chart/Chart";
 import Grid from "@material-ui/core/Grid";
@@ -30,12 +30,21 @@ function Statistical() {
         statistical component
         <Grid container className={classnames(classes.paper)}>
           <Grid item xs={12}>
-            <WeeklyScalesStats></WeeklyScalesStats>
+            {/* WeeklyScalesStats */}
+            {/* WeeklyScalesStats */}
+            {/* WeeklyScalesStats */}
+            <WeeklySalesStats></WeeklySalesStats>
           </Grid>
           <Grid item xs={12}>
+            {/* chart */}
+            {/* chart */}
+            {/* chart */}
             <Chart></Chart>
           </Grid>
           <Grid item xs={12}>
+            {/*ListStatistical */}
+            {/*ListStatistical */}
+            {/*ListStatistical */}
             <ListStatistical></ListStatistical>
           </Grid>
         </Grid>

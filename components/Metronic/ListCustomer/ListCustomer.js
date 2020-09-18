@@ -24,7 +24,6 @@ function ListCustomer() {
   const classes = useStyles();
   return (
     <Grid item xs={12} className={classes.root}>
-      ListCustomer cpn
       <Grid container spacing={3}>
         <ItemCustomer></ItemCustomer>
         <ItemCustomer></ItemCustomer>
