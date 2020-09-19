@@ -2,9 +2,19 @@
   --color-title: #141414;
   --color-nav: #0bb783;
   --color-bg: #f7f2ed;
+  --color-user-type-1: #ffe2e5;
+  --color-user-type-2: #c9f7f5;
+  --color-user-type-3: #d7f9ef;
+  --color-user-type-4: #f3f6f9;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, Helvetica,
+    "sans-serif";
+}
+
+img {
+  max-width: 100%;
 }

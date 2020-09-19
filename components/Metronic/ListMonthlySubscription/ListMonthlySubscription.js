@@ -2,7 +2,7 @@ import React from "react";
 import ItemMonthlySubscription from "./ItemMonthlySubscription/ItemMonthlySubscription";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import classnames from "classnames";
+import UtilStyles from "./../../../sass/ItemMonthlySubscription.module.css";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -27,7 +27,11 @@ function ListMonthlySubscription() {
   const classes = useStyles();
   return (
     <Grid xs={12} item>
-      <Grid container spacing={3}>
+      <Grid
+        container
+        spacing={3}
+        className={UtilStyles.ListItemMonthlySubscription}
+      >
         <ItemMonthlySubscription></ItemMonthlySubscription>
         <ItemMonthlySubscription></ItemMonthlySubscription>
         <ItemMonthlySubscription></ItemMonthlySubscription>

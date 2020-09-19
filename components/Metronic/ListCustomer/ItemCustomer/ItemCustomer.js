@@ -4,16 +4,19 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import classnames from "classnames";
 import UtilStyles from "./../../../../less/ItemCustomer.module.css";
+import Button from "@material-ui/core/Button";
+
+let log = console.log;
 // custom Styles
 const useStyles = makeStyles((theme) => ({
   root: {},
   paper: {
     padding: theme.spacing(2),
-    textAlign: "center",
+
     color: theme.palette.text.secondary,
   },
   ItemCustomer: {
-    height: 300,
+    height: 400,
   },
   spacing: {
     padding: 20,
@@ -25,8 +28,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ItemCustomer() {
+function ItemCustomer({ time, logo, title, content, user }) {
   const classes = useStyles();
+  log(user);
+
+  let userAvatars = user.map((us) => {
+    return (
+      <a href="#" key={us.id} className={`${UtilStyles.virtual_user}`}>
+        <img src={us.img} />
+      </a>
+    );
+  });
+
   return (
     <Grid item xs={4} sm={4}>
       <Paper className={classnames(classes.paper, classes.ItemCustomer)}>
@@ -35,25 +48,25 @@ function ItemCustomer() {
           {/* card header */}
           {/* card header */}
           <div className={`${UtilStyles.card_header}`}>
-            <div className={`${UtilStyles.card_hd_left}`}></div>
-            <div className={`${UtilStyles.card_hd_right}`}></div>
+            <div className={`${UtilStyles.card_hd_left}`}>{time}</div>
+            <div className={`${UtilStyles.card_hd_right}`}>
+              <div className={`${UtilStyles.logo}`}>
+                <img src={logo} />
+              </div>
+            </div>
           </div>
           {/* card main */}
           {/* card main */}
           {/* card main */}
           <div className={`${UtilStyles.card_main}`}>
-            <div className={`${UtilStyles.card_m_title}`}></div>
-            <div className={`${UtilStyles.card_m_content}`}></div>
+            <div className={`${UtilStyles.card_m_title}`}>{title}</div>
+            <div className={`${UtilStyles.card_m_content}`}>{content}</div>
           </div>
           {/* card footer */}
           {/* card footer */}
           {/* card footer */}
           <div className={`${UtilStyles.card_footer}`}>
-            <div className={`${UtilStyles.card_ft_user}`}>
-              <div className={`${UtilStyles.virtual_user}`}></div>
-              <div className={`${UtilStyles.virtual_user}`}></div>
-              <div className={`${UtilStyles.virtual_user}`}></div>
-            </div>
+            <div className={`${UtilStyles.card_ft_user}`}>{userAvatars}</div>
           </div>
         </div>
       </Paper>

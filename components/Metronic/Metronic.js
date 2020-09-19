@@ -50,9 +50,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Metronic() {
+function Metronic({ listCustomerDatas }) {
   const classes = useStyles();
-
+  // got it!
+  // log(listCustomerDatas);
   return (
     <Grid container>
       {/* header */}
@@ -82,7 +83,7 @@ function Metronic() {
           {/* ListCustomer */}
           {/* ListCustomer */}
           {/* ListCustomer */}
-          <ListCustomer></ListCustomer>
+          <ListCustomer listCustomerDatas={listCustomerDatas}></ListCustomer>
 
           {/* Statistical */}
           {/* Statistical */}

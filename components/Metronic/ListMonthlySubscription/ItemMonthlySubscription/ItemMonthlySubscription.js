@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   root: {},
   paper: {
     padding: theme.spacing(2),
-    textAlign: "center",
+
     color: theme.palette.text.secondary,
   },
   ItemMonthlySubscription: {
@@ -46,15 +46,19 @@ function ItemMonthlySubscription() {
           <div className={`${UtilStyles.card_header}`}>
             <div className={`${UtilStyles.card_hd_left}`}></div>
             <div className={`${UtilStyles.card_hd_right}`}>
-              <div className={`${UtilStyles.card_hd_title}`}></div>
-              <div className={`${UtilStyles.card_hd_date}`}></div>
+              <div className={`${UtilStyles.card_hd_title}`}>
+                Monthly Subscription Based SaaS
+              </div>
+              <div className={`${UtilStyles.card_hd_date}`}>
+                Due: 27 Apr 2020
+              </div>
             </div>
           </div>
           {/* card main */}
           {/* card main */}
           {/* card main */}
           <div className={`${UtilStyles.card_main}`}>
-            <div className={`${UtilStyles.card_m_title}`}></div>
+            <div className={`${UtilStyles.card_m_title}`}>progess</div>
             <div className={`${UtilStyles.card_m_progress}`}></div>
           </div>
           {/* card footer */}
