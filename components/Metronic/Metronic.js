@@ -14,20 +14,39 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 
-  header: {
-    backgroundColor: theme.status.danger,
+  nav: {
+    backgroundColor: theme.color.nav,
+    height: 80,
+    width: "100%",
+    position: "fixed",
+    top: 0,
+    left: 0,
+    padding: theme.wrap_spacing.pd,
+  },
+
+  main: {
+    minHeight: "100vh",
+    padding: theme.wrap_spacing.pd,
+    paddingTop: 50,
+    paddingBottom: 50,
+    backgroundColor: "lightskyblue",
+  },
+  mb_20: {
+    marginBottom: 20,
+  },
+  mt_20: {
+    marginTop: 20,
+  },
+  do_not_required: {
+    height: 500,
+    backgroundColor: theme.color.bg,
+    color: "red",
   },
 
   footer: {
-    backgroundColor: theme.status.danger,
-  },
-  main: {
-    minHeight: "100vh",
-    padding: "5vh 8vw",
-    backgroundColor: "lightskyblue",
-  },
-  mb_10: {
-    marginBottom: 10,
+    backgroundColor: "white",
+    height: 60,
+    padding: theme.wrap_spacing.pd,
   },
 }));
 
@@ -39,9 +58,14 @@ function Metronic() {
       {/* header */}
       {/* header */}
       {/* header */}
-      <Grid item xs={12} className={cn(classes.header)}>
+      <Grid item xs={12} className={cn(classes.nav)}>
         header here
       </Grid>
+
+      <Grid item xs={12} className={cn(classes.do_not_required)}>
+        do_not_required
+      </Grid>
+
       {/* main */}
       {/* main */}
       {/* main */}
@@ -75,7 +99,10 @@ function Metronic() {
       {/* footer */}
       {/* footer */}
       <Grid item xs={12} className={cn(classes.footer)}>
-        footer here
+        <footer>
+          {/* <div className={GlobalCSS.foot_left}></div>
+          <div className={GlobalCSS.foot_right}></div> */}
+        </footer>
       </Grid>
     </Grid>
   );

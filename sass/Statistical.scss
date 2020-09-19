@@ -1,0 +1,106 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin fullWidthHeight {
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  @include fullWidthHeight();
+  // card header
+  // card header
+  // card header
+  .card_header {
+    height: 80px;
+    width: 100%;
+    background-color: pink;
+    display: flex;
+
+    .card_hd_left {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      height: 100%;
+      background-color: powderblue;
+      .card_hd_title {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 50%;
+        background-color: rosybrown;
+        text-transform: capitalize;
+        font-weight: bold;
+        color: var(--color-title);
+        font-size: 18px;
+      }
+      .card_hd_statistical {
+        width: 100%;
+        height: 50%;
+        background-color: royalblue;
+      }
+    }
+    .card_hd_right {
+      display: flex;
+      width: 30%;
+      height: 100%;
+      background-color: purple;
+    }
+  }
+  // card main
+  // card main
+  // card main
+  .card_main {
+    min-height: 300px;
+    width: 100%;
+    background-color: plum;
+    @include flexCenter();
+    .chart {
+      height: 200px;
+      width: 200px;
+      background-color: saddlebrown;
+    }
+  }
+  // card footer
+  // card footer
+  // card footer
+  .card_footer {
+    min-height: 150px;
+    width: 100%;
+    background-color: powderblue;
+    @include flexCenter();
+    flex-wrap: wrap;
+    .card_ft_item {
+      height: 50px;
+      width: 50%;
+      background-color: sandybrown;
+      border: 1px solid #000;
+      @include flexCenter();
+      .card_ft_item_left {
+        width: 30%;
+        height: 50px;
+        background-color: seagreen;
+      }
+      .card_ft_item_right {
+        width: 70%;
+        height: 50px;
+        background-color: seashell;
+        display: flex;
+        flex-direction: column;
+        .card_ft_item_r_top {
+          width: 100%;
+          height: 50px;
+          background-color: sienna;
+        }
+        .card_ft_item_r_bottom {
+          width: 100%;
+          height: 50px;
+          background-color: silver;
+        }
+      }
+    }
+  }
+}

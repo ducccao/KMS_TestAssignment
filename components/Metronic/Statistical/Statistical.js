@@ -4,8 +4,9 @@ import ListStatistical from "./ListStatistical/ListStatistical";
 import Chart from "./Chart/Chart";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import classnames from "classnames";
+import cn from "classnames";
 import Paper from "@material-ui/core/Paper";
+import UtilStyles from "./../../../sass/Statistical.module.css";
 // custom styles
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     padding: theme.spacing(2),
-    textAlign: "center",
+
     color: theme.palette.text.secondary,
   },
   Statistical: {
@@ -27,26 +28,21 @@ function Statistical() {
   return (
     <Grid item xs={4} sm={4} md={4} lg={4}>
       <Paper>
-        statistical component
-        <Grid container className={classnames(classes.paper)}>
-          <Grid item xs={12}>
-            {/* WeeklyScalesStats */}
-            {/* WeeklyScalesStats */}
-            {/* WeeklyScalesStats */}
-            <WeeklySalesStats></WeeklySalesStats>
-          </Grid>
-          <Grid item xs={12}>
-            {/* chart */}
-            {/* chart */}
-            {/* chart */}
-            <Chart></Chart>
-          </Grid>
-          <Grid item xs={12}>
-            {/*ListStatistical */}
-            {/*ListStatistical */}
-            {/*ListStatistical */}
-            <ListStatistical></ListStatistical>
-          </Grid>
+        <Grid container className={cn(classes.paper, UtilStyles.card)}>
+          {/* WeeklyScalesStats */}
+          {/* WeeklyScalesStats */}
+          {/* WeeklyScalesStats */}
+          <WeeklySalesStats></WeeklySalesStats>
+
+          {/* chart */}
+          {/* chart */}
+          {/* chart */}
+          <Chart></Chart>
+
+          {/*ListStatistical */}
+          {/*ListStatistical */}
+          {/*ListStatistical */}
+          <ListStatistical></ListStatistical>
         </Grid>
       </Paper>
     </Grid>

@@ -1,9 +1,14 @@
 import React from "react";
 import ItemNewArrivals from "./ItemNewArrivals/ItemNewArrivals";
+import UtilStyles from "./../../../../sass/NewArrivals.module.css";
+
 function ListNewArrivals() {
   return (
-    <div>
-      list new arrivals cpn
+    <div className={UtilStyles.card_main}>
+      <ItemNewArrivals></ItemNewArrivals>
+      <ItemNewArrivals></ItemNewArrivals>
+      <ItemNewArrivals></ItemNewArrivals>
+      <ItemNewArrivals></ItemNewArrivals>
       <ItemNewArrivals></ItemNewArrivals>
     </div>
   );

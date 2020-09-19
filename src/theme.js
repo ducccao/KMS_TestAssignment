@@ -17,6 +17,13 @@ const theme = createMuiTheme({
       default: "#fff",
     },
   },
+  color: {
+    bg: "#f7f2ed",
+    nav: "#0bb783",
+  },
+  wrap_spacing: {
+    pd: "0vh 8vw",
+  },
   status: {
     danger: orange[500],
   },

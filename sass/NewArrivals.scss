@@ -1,0 +1,160 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin fullWidthHeight {
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  @include fullWidthHeight();
+  // card header
+  // card header
+  // card header
+  .card_header {
+    width: 100%;
+    height: 80px;
+    background-color: skyblue;
+    display: flex;
+    .card_hd_left {
+      width: 70%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .card_hd_l_top {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--color-title);
+        width: 100%;
+        height: 50%;
+        background-color: slategray;
+      }
+      .card_hd_l_bottom {
+        width: 100%;
+        height: 50%;
+        background-color: springgreen;
+      }
+    }
+    .card_hd_right {
+      width: 30%;
+      height: 100%;
+      background-color: steelblue;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .btn {
+        padding: 10px;
+        margin: 10px;
+        background-color: var(--color-nav);
+        color: white;
+        text-transform: capitalize;
+        cursor: pointer;
+      }
+      .month {
+      }
+      .week {
+      }
+      .day {
+      }
+    }
+  }
+  // card main
+  // card main
+  // card main
+  .card_main {
+    width: 100%;
+    min-height: 100px;
+    background-color: slateblue;
+    display: flex;
+    flex-wrap: wrap;
+    .item {
+      width: 100%;
+      height: 70px;
+      border: 1px solid #000;
+      display: flex;
+      margin-bottom: 20px;
+      &:first-child {
+        margin-top: 20px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      // item left
+      // item left
+      // item left
+      .item_left {
+        display: flex;
+        width: 50%;
+        height: 100%;
+        background-color: steelblue;
+        .item_l_left {
+          height: 100%;
+          width: 25%;
+          background-color: thistle;
+        }
+        .item_l_right {
+          height: 100%;
+          width: 75%;
+          background-color: tomato;
+          display: flex;
+          flex-direction: column;
+
+          .item_title {
+            width: 100%;
+            height: 50%;
+            background-color: turquoise;
+            display: flex;
+            align-items: center;
+          }
+          .item_status {
+            width: 100%;
+            height: 50%;
+            background-color: violet;
+          }
+        }
+      }
+      // item mid
+      // item mid
+      // item mid
+      .item_mid {
+        display: flex;
+        align-items: center;
+
+        justify-content: center;
+        width: 25%;
+        height: 100%;
+        background-color: tan;
+      }
+      // item right
+      // item right
+      // item right
+      .item_right {
+        display: flex;
+        width: 25%;
+        height: 100%;
+        background-color: teal;
+        .item_total_user {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50%;
+          height: 100%;
+          background-color: white;
+        }
+        .item_btn {
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          width: 50%;
+          height: 100%;
+          background-color: yellow;
+        }
+      }
+    }
+  }
+}
