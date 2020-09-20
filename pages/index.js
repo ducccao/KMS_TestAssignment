@@ -1,7 +1,12 @@
 import Metronic from "./../components/Metronic/Metronic";
 let log = console.log;
 
-export default function Home({ listCustomerDatas, saasDatas, arrivalsDatas }) {
+export default function Home({
+  listCustomerDatas,
+  saasDatas,
+  arrivalsDatas,
+  weeklySalesStatsDatas,
+}) {
   // got it !
   // log(datas);
   return (
@@ -10,6 +15,7 @@ export default function Home({ listCustomerDatas, saasDatas, arrivalsDatas }) {
         listCustomerDatas={listCustomerDatas}
         saasDatas={saasDatas}
         arrivalsDatas={arrivalsDatas}
+        weeklySalesStatsDatas={weeklySalesStatsDatas}
       ></Metronic>
     </div>
   );
@@ -31,13 +37,18 @@ export async function getStaticProps() {
   const arrivals_api = await fetch("http://localhost:3000/api/new-arrivals");
   const arrivalsDatas = await arrivals_api.json();
 
-  // handle Time when it got clicked
+  // Weekly Sales Stats api
+  const weekly_sales_stats_api = await fetch(
+    "http://localhost:3000/api/weekly-sales-stats"
+  );
+  const weeklySalesStatsDatas = await weekly_sales_stats_api.json();
 
   return {
     props: {
       listCustomerDatas,
       saasDatas,
       arrivalsDatas,
+      weeklySalesStatsDatas,
     },
   };
 }

@@ -8,15 +8,19 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
 }));
-function WeeklySalesStats() {
+function WeeklySalesStats({ total_sales }) {
   const classes = useStyles();
   return (
     <div className={UtilStyles.card_header}>
       <div className={UtilStyles.card_hd_left}>
         <div className={UtilStyles.card_hd_title}>weekly sales stats</div>
-        <div className={UtilStyles.card_hd_statistical}>890,344 sales</div>
+        <div className={UtilStyles.card_hd_statistical}>{total_sales}</div>
       </div>
-      <div className={UtilStyles.card_hd_right}></div>
+      <div className={UtilStyles.card_hd_right}>
+        <div className={UtilStyles.three_dot_wrapper}>
+          <img src="http://localhost:3000/image/threedot.svg" />
+        </div>
+      </div>
     </div>
   );
 }

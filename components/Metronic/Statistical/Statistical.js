@@ -7,6 +7,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import cn from "classnames";
 import Paper from "@material-ui/core/Paper";
 import UtilStyles from "./../../../sass/Statistical.module.css";
+
+let log = console.log;
 // custom styles
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,8 +25,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 // statistical cpn
-function Statistical() {
+function Statistical({ weeklySalesStatsDatas }) {
   const classes = useStyles();
+  const { total_sales, types } = weeklySalesStatsDatas;
+  // log(total_sales, types);
   return (
     <Grid item xs={4} sm={4} md={4} lg={4}>
       <Paper>
@@ -32,7 +36,7 @@ function Statistical() {
           {/* WeeklyScalesStats */}
           {/* WeeklyScalesStats */}
           {/* WeeklyScalesStats */}
-          <WeeklySalesStats></WeeklySalesStats>
+          <WeeklySalesStats total_sales={total_sales}></WeeklySalesStats>
 
           {/* chart */}
           {/* chart */}
@@ -42,7 +46,7 @@ function Statistical() {
           {/*ListStatistical */}
           {/*ListStatistical */}
           {/*ListStatistical */}
-          <ListStatistical></ListStatistical>
+          <ListStatistical types={types}></ListStatistical>
         </Grid>
       </Paper>
     </Grid>

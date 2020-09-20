@@ -56,7 +56,7 @@ function Metronic({
   listCustomerDatas,
   saasDatas,
   arrivalsDatas,
-
+  weeklySalesStatsDatas,
 }) {
   const classes = useStyles();
   // got it!
@@ -97,7 +97,9 @@ function Metronic({
           {/* Statistical */}
           {/* Statistical */}
           {/* Statistical */}
-          <Statistical></Statistical>
+          <Statistical
+            weeklySalesStatsDatas={weeklySalesStatsDatas}
+          ></Statistical>
 
           {/* NewArrivals */}
           {/* NewArrivals */}
