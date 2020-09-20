@@ -17,7 +17,7 @@
   .card_header {
     width: 100%;
     height: 80px;
-    background-color: skyblue;
+
     display: flex;
     .card_hd_left {
       width: 70%;
@@ -32,34 +32,36 @@
         color: var(--color-title);
         width: 100%;
         height: 50%;
-        background-color: slategray;
       }
       .card_hd_l_bottom {
         width: 100%;
         height: 50%;
-        background-color: springgreen;
+        color: #b5b5c3c0;
+        font-weight: bold;
+        text-transform: capitalize;
+        font-size: 12px;
       }
     }
     .card_hd_right {
       width: 30%;
       height: 100%;
-      background-color: steelblue;
+
       display: flex;
       justify-content: flex-end;
       align-items: center;
       .btn {
         padding: 10px;
         margin: 10px;
-        background-color: var(--color-nav);
-        color: white;
+
+        color: #b5b5c3;
         text-transform: capitalize;
         cursor: pointer;
+        &:hover {
+          color: var(--color-nav);
+        }
       }
-      .month {
-      }
-      .week {
-      }
-      .day {
+      .time_on_focus {
+        background-color: var(--color-nav);
       }
     }
   }
@@ -69,13 +71,13 @@
   .card_main {
     width: 100%;
     min-height: 100px;
-    background-color: slateblue;
+
     display: flex;
     flex-wrap: wrap;
     .item {
       width: 100%;
       height: 70px;
-      border: 1px solid #000;
+
       display: flex;
       margin-bottom: 20px;
       &:first-child {
@@ -91,30 +93,50 @@
         display: flex;
         width: 50%;
         height: 100%;
-        background-color: steelblue;
-        .item_l_left {
+
+        .item_logo {
           height: 100%;
-          width: 25%;
-          background-color: thistle;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .item_l_left {
+            height: 50px;
+            width: 50px;
+            background-color: #f3f6f9;
+            padding: 10px;
+          }
         }
         .item_l_right {
           height: 100%;
           width: 75%;
-          background-color: tomato;
+
           display: flex;
           flex-direction: column;
 
           .item_title {
             width: 100%;
             height: 50%;
-            background-color: turquoise;
+
             display: flex;
-            align-items: center;
+            align-items: flex-end;
+            text-transform: capitalize;
+            font-weight: bold;
+            color: var(--color-title);
+            padding-left: 10px;
+            font-size: 15px;
+            &:hover {
+              cursor: pointer;
+              color: var(--color-nav);
+            }
           }
           .item_status {
             width: 100%;
             height: 50%;
-            background-color: violet;
+            text-transform: capitalize;
+            font-weight: bold;
+            color: #b5b5c3;
+            padding-left: 10px;
+            font-size: 14px;
           }
         }
       }
@@ -128,7 +150,9 @@
         justify-content: center;
         width: 25%;
         height: 100%;
-        background-color: tan;
+        font-size: 14px;
+        color: #b5b5c3;
+        font-weight: bold;
       }
       // item right
       // item right
@@ -137,22 +161,38 @@
         display: flex;
         width: 25%;
         height: 100%;
-        background-color: teal;
+
         .item_total_user {
           display: flex;
           align-items: center;
           justify-content: center;
           width: 50%;
           height: 100%;
-          background-color: white;
+
+          font-size: 14px;
+          color: #b5b5c3;
+          font-weight: bold;
         }
-        .item_btn {
+        .btn_wrap {
+          width: 50%;
+          height: 100%;
           justify-content: center;
           align-items: center;
           display: flex;
-          width: 50%;
-          height: 100%;
-          background-color: yellow;
+          .item_btn {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 40px;
+            width: 40px;
+
+            border-radius: 7px;
+
+            background-color: #f3f6f9;
+            &:hover {
+              background-color: #c2c8ce;
+            }
+          }
         }
       }
     }

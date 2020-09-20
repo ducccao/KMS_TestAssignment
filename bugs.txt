@@ -8,6 +8,8 @@
 - Tạo data array map ra, specify id or key để CSS
 
 4. cannot fetch the data dont know why..
+- fetdata from any route - component in folder page
 
 5. cannot pass prop from father to child ..
 - only can do it in folder page
+-> can pass !

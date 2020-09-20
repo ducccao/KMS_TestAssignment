@@ -1,11 +1,8 @@
 let log = console.log;
 const pure_url = "https://preview.keenthemes.com/";
-function virtualRandomData() {
-  // function: random data for new arrivals component
-  // input: none
-  // output: array random data
 
-  let data = [
+function virtualRandomData() {
+  const data = [
     {
       id: 0,
       logo: `${pure_url}/metronic/theme/html/demo9/dist/assets/media/svg/misc/006-plurk.svg`,
@@ -48,31 +45,8 @@ function virtualRandomData() {
     },
   ];
 
+  log("22");
   for (let i = 0; i < data.length; i++) {
-    // debug
-    //log(Math.floor(Math.random() * (data.length - 1 - 0 + 1) + 0));
-    let tem1 = Math.floor(Math.random() * (data.length - 1 - 0 + 1) + 0);
-    let tem2 = data[i];
-    // swap it
-    data[i] = data[tem1];
-    data[tem1] = tem2;
+    log(i);
   }
-  return data;
 }
-
-export default (req, res) => {
-  res.statusCode = 200;
-
-  const arrivals_datas = [
-    { type: "Month", datas: virtualRandomData() },
-    {
-      type: "Week",
-      datas: virtualRandomData(),
-    },
-    {
-      type: "Day",
-      datas: virtualRandomData(),
-    },
-  ];
-  res.json(arrivals_datas);
-};

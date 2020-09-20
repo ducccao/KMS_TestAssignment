@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     left: 0,
     padding: theme.wrap_spacing.pd,
+    zIndex: 1,
   },
 
   main: {
@@ -51,7 +52,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Metronic({ listCustomerDatas, saasDatas }) {
+function Metronic({
+  listCustomerDatas,
+  saasDatas,
+  arrivalsDatas,
+
+}) {
   const classes = useStyles();
   // got it!
   // log(listCustomerDatas);
@@ -96,7 +102,7 @@ function Metronic({ listCustomerDatas, saasDatas }) {
           {/* NewArrivals */}
           {/* NewArrivals */}
           {/* NewArrivals */}
-          <NewArrivals></NewArrivals>
+          <NewArrivals arrivalsDatas={arrivalsDatas}></NewArrivals>
         </Grid>
       </Grid>
       {/* footer */}
