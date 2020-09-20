@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(4),
 
     color: theme.palette.text.secondary,
   },
@@ -30,7 +30,7 @@ function Statistical({ weeklySalesStatsDatas }) {
   const { total_sales, types } = weeklySalesStatsDatas;
   // log(total_sales, types);
   return (
-    <Grid item xs={4} sm={4} md={4} lg={4}>
+    <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
       <Paper>
         <Grid container className={cn(classes.paper, UtilStyles.card)}>
           {/* WeeklyScalesStats */}

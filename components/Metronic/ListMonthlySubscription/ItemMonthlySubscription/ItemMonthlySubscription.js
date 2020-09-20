@@ -58,7 +58,7 @@ function ItemMonthlySubscription({ logo, bg, progress_bg, team }) {
   }))(LinearProgress);
 
   return (
-    <Grid xs={4} item>
+    <Grid xs={12} sm={12} md={4} lg={4} xl={4} item>
       <Paper className={cn(classes.paper, classes.ItemMonthlySubscription)}>
         <div className={`${UtilStyles.card}`}>
           {/* card header */}

@@ -25,13 +25,13 @@
       flex-direction: column;
       width: 70%;
       height: 100%;
-      background-color: powderblue;
+
       .card_hd_title {
         display: flex;
         align-items: center;
         width: 100%;
         height: 50%;
-        background-color: rosybrown;
+
         text-transform: capitalize;
         font-weight: bold;
         color: var(--color-title);
@@ -40,7 +40,8 @@
       .card_hd_statistical {
         width: 100%;
         height: 50%;
-        background-color: royalblue;
+        font-weight: 500;
+        color: #b5b5c3 !important;
       }
     }
     .card_hd_right {
@@ -75,13 +76,14 @@
       height: 200px;
       width: 200px;
       background-color: saddlebrown;
+      position: relative;
     }
   }
   // card footer
   // card footer
   // card footer
   .card_footer {
-    min-height: 201px;
+    min-height: 170px;
     width: 100%;
 
     @include flexCenter();

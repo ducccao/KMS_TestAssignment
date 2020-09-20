@@ -12,14 +12,12 @@
   flex-direction: column;
   width: 70%;
   height: 100%;
-  background-color: powderblue;
 }
 .card .card_header .card_hd_left .card_hd_title {
   display: flex;
   align-items: center;
   width: 100%;
   height: 50%;
-  background-color: rosybrown;
   text-transform: capitalize;
   font-weight: bold;
   color: var(--color-title);
@@ -28,7 +26,8 @@
 .card .card_header .card_hd_left .card_hd_statistical {
   width: 100%;
   height: 50%;
-  background-color: royalblue;
+  font-weight: 500;
+  color: #b5b5c3 !important;
 }
 .card .card_header .card_hd_right {
   display: flex;
@@ -60,9 +59,10 @@
   height: 200px;
   width: 200px;
   background-color: saddlebrown;
+  position: relative;
 }
 .card .card_footer {
-  min-height: 201px;
+  min-height: 170px;
   width: 100%;
   display: flex;
   justify-content: center;

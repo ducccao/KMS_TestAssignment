@@ -15,9 +15,7 @@ const useStyles = makeStyles((theme) => ({
 
     color: theme.palette.text.secondary,
   },
-  ItemCustomer: {
-    height: 350,
-  },
+
   spacing: {
     padding: 20,
   },
@@ -41,8 +39,8 @@ function ItemCustomer({ time, logo, title, content, user }) {
   });
 
   return (
-    <Grid item xs={4} sm={4}>
-      <Paper className={classnames(classes.paper, classes.ItemCustomer)}>
+    <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+      <Paper className={classnames(classes.paper)}>
         <div className={`${UtilStyles.card}`}>
           {/* card header */}
           {/* card header */}

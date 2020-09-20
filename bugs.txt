@@ -4,7 +4,7 @@
 2. className confict
 - Material UI doc - nextjs demo
 
-3. Auto generate class vậy thì làm sao dùng nth-child để style được ?
+3. Auto generate class như vậy thì làm sao dùng nth-child để style được ?
 - Tạo data array map ra, specify id or key để CSS
 
 4. cannot fetch the data dont know why..
@@ -13,3 +13,12 @@
 5. cannot pass prop from father to child ..
 - only can do it in folder page
 -> can pass !
+
+6. How can I make an animation for Arrivals part ?
+- setTimeout, setState
+- keyframe
+
+7. How to change background of list btn when it was focused ?
+- set up default btn by setState
+- setState - set bg
+- conditional classnames

@@ -66,18 +66,42 @@ function Metronic({
       {/* header */}
       {/* header */}
       {/* header */}
-      <Grid item xs={12} className={cn(classes.nav)}>
+      <Grid
+        item
+        xs={12}
+        sm={12}
+        md={12}
+        lg={12}
+        xl={12}
+        className={cn(classes.nav)}
+      >
         header here
       </Grid>
 
-      <Grid item xs={12} className={cn(classes.do_not_required)}>
+      <Grid
+        item
+        xs={12}
+        sm={12}
+        md={12}
+        lg={12}
+        xl={12}
+        className={cn(classes.do_not_required)}
+      >
         do_not_required
       </Grid>
 
       {/* main */}
       {/* main */}
       {/* main */}
-      <Grid item xs={12} className={cn(classes.main)}>
+      <Grid
+        item
+        xs={12}
+        sm={12}
+        md={12}
+        lg={12}
+        xl={12}
+        className={cn(classes.main)}
+      >
         {/* wrap it to spacing*/}
         {/* wrap it to spacing*/}
         {/* wrap it to spacing*/}
@@ -110,7 +134,15 @@ function Metronic({
       {/* footer */}
       {/* footer */}
       {/* footer */}
-      <Grid item xs={12} className={cn(classes.footer)}>
+      <Grid
+        item
+        xs={12}
+        sm={12}
+        md={12}
+        lg={12}
+        xl={12}
+        className={cn(classes.footer)}
+      >
         <footer>
           {/* <div className={GlobalCSS.foot_left}></div>
           <div className={GlobalCSS.foot_right}></div> */}

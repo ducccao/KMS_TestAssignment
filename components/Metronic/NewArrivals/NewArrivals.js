@@ -30,7 +30,7 @@ function NewArrivals({ arrivalsDatas }) {
   // state green - create bg green for control cpn
   const [green, setGreen] = useState(false);
   return (
-    <Grid item xs={8} sm={8} md={8} lg={8}>
+    <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
       <Paper className={classnames(classes.paper)}>
         <div className={UtilStyles.card}>
           {/* control time data right there */}
