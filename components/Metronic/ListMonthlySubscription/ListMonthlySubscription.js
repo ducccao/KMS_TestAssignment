@@ -3,6 +3,8 @@ import ItemMonthlySubscription from "./ItemMonthlySubscription/ItemMonthlySubscr
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import UtilStyles from "./../../../sass/ItemMonthlySubscription.module.css";
+
+let log = console.log;
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -23,8 +25,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ListMonthlySubscription() {
+function ListMonthlySubscription({ saasDatas }) {
   const classes = useStyles();
+  // got it!
+  // log(saasDatas);
+  let ItemSaasComponents = saasDatas.map((data, index) => {
+    return (
+      <ItemMonthlySubscription
+        key={index}
+        bg={data.bg}
+        logo={data.logo}
+        team={data.team}
+        progress_bg={data.progress_bg}
+      ></ItemMonthlySubscription>
+    );
+  });
   return (
     <Grid xs={12} item>
       <Grid
@@ -32,9 +47,7 @@ function ListMonthlySubscription() {
         spacing={3}
         className={UtilStyles.ListItemMonthlySubscription}
       >
-        <ItemMonthlySubscription></ItemMonthlySubscription>
-        <ItemMonthlySubscription></ItemMonthlySubscription>
-        <ItemMonthlySubscription></ItemMonthlySubscription>
+        {ItemSaasComponents}
       </Grid>
     </Grid>
   );

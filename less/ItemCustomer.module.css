@@ -7,10 +7,10 @@
 .card .card_header {
   display: flex;
   width: 100%;
-  height: 20%;
+  height: 10%;
 }
 .card .card_header .card_hd_left {
-  width: 70%;
+  width: 80%;
   display: flex;
   align-items: center;
   color: #b8bccc;
@@ -19,7 +19,7 @@
   font-weight: 500;
 }
 .card .card_header .card_hd_right {
-  width: 30%;
+  width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,18 +34,18 @@
 .card .card_main {
   display: flex;
   width: 100%;
-  height: 60%;
+  height: 75%;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
 .card .card_main .card_m_title {
-  height: 50%;
+  height: 45%;
   width: 60%;
   display: flex;
   align-items: center;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: bold;
   color: var(--color-title);
   transition: 0.13s;
 }
@@ -54,8 +54,8 @@
   color: var(--color-nav);
 }
 .card .card_main .card_m_content {
-  height: 50%;
-  width: 85%;
+  height: 55%;
+  width: 92%;
   color: #7e8299;
   font-size: 16px;
 }
@@ -65,7 +65,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 20%;
+  height: 15%;
 }
 .card .card_footer .card_ft_user {
   height: 70%;

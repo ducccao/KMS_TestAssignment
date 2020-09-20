@@ -6,6 +6,7 @@ import ListCustomer from "./ListCustomer/ListCustomer";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import cn from "classnames";
+import { lightBlue } from "@material-ui/core/colors";
 
 let log = console.log;
 
@@ -50,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Metronic({ listCustomerDatas }) {
+function Metronic({ listCustomerDatas, saasDatas }) {
   const classes = useStyles();
   // got it!
   // log(listCustomerDatas);
@@ -78,7 +79,9 @@ function Metronic({ listCustomerDatas }) {
           {/* ListMonthlySubscription */}
           {/* ListMonthlySubscription */}
           {/* ListMonthlySubscription */}
-          <ListMonthlySubscription></ListMonthlySubscription>
+          <ListMonthlySubscription
+            saasDatas={saasDatas}
+          ></ListMonthlySubscription>
 
           {/* ListCustomer */}
           {/* ListCustomer */}

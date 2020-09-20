@@ -1,97 +1,119 @@
-.ListItemMonthlySubscription {
-  .card {
-    background-color: aliceblue;
-    height: 100%;
+@mixin backgroundColor($color) {
+  background-color: $color;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  // card header
+  // card header
+  // card header
+  .card_header {
+    display: flex;
     width: 100%;
+
+    .card_hd_left {
+      width: 80px;
+      height: 95%;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .card_hd_right {
+      width: 70%;
+
+      display: flex;
+      flex-direction: column;
+      .card_hd_title {
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        font-weight: bold;
+        color: var(--color-title);
+        height: 70%;
+        width: 90%;
+        font-size: 18px;
+        padding-left: 20px;
+        &:hover {
+          cursor: pointer;
+          color: var(--color-nav);
+        }
+      }
+      .card_hd_date {
+        padding-left: 20px;
+        height: 30%;
+        font-weight: 500;
+        font-size: 15px;
+        color: #b8bccc;
+      }
+    }
+  }
+
+  // card main
+  // card main
+  // card main
+  .card_main {
+    margin: 30px 0;
+    display: flex;
+    width: 100%;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .card_m_title {
+      height: 50%;
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      color: var(--color-title);
+      text-transform: capitalize;
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+    .card_m_progress {
+      height: 50%;
+      width: 100%;
+    }
+  }
+  // card footer
+  // card footer
+  // card footer
+  .card_footer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 
-    // card header
-    // card header
-    // card header
-    .card_header {
-      display: flex;
+    .card_ft_team {
+      height: 30%;
       width: 100%;
-      background-color: aqua;
-      min-height: 30%;
-      .card_hd_left {
-        width: 80px;
-        height: 100%;
-        background-color: chartreuse;
-      }
-      .card_hd_right {
-        width: 70%;
-        background-color: chartreuse;
-        display: flex;
-        flex-direction: column;
-        .card_hd_title {
-          height: 70%;
-          background-color: chocolate;
-        }
-        .card_hd_date {
-          height: 30%;
-          background-color: crimson;
-        }
-      }
+      color: var(--color-title);
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 10px;
     }
-
-    // card main
-    // card main
-    // card main
-    .card_main {
-      display: flex;
+    .card_ft_user {
+      height: 70%;
       width: 100%;
-      height: 35%;
-      background-color: brown;
 
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .card_m_title {
-        height: 50%;
-        width: 100%;
-        background-color: darkblue;
-      }
-      .card_m_progress {
-        height: 50%;
-        width: 100%;
-        background-color: darkgoldenrod;
-      }
-    }
-    // card footer
-    // card footer
-    // card footer
-    .card_footer {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-      width: 100%;
-      height: 35%;
-      background-color: darkgreen;
-
-      .card_ft_team {
-        height: 30%;
-        width: 100%;
-        background-color: darkkhaki;
-      }
-      .card_ft_user {
-        height: 70%;
-        width: 100%;
-        background-color: darkmagenta;
+      .virtual_user {
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        .virtual_user {
-          display: flex;
-          height: 60px;
-          width: 60px;
-          background-color: pink;
-          margin-right: 10px;
-          border-radius: 10px;
-          &:last-child {
-            margin-right: 0;
-          }
+        height: 50px;
+        width: 50px;
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 10px;
+        &:last-child {
+          margin-right: 0;
         }
       }
     }

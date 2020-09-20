@@ -11,12 +11,12 @@ let log = console.log;
 const useStyles = makeStyles((theme) => ({
   root: {},
   paper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(4),
 
     color: theme.palette.text.secondary,
   },
   ItemCustomer: {
-    height: 400,
+    height: 350,
   },
   spacing: {
     padding: 20,
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
 function ItemCustomer({ time, logo, title, content, user }) {
   const classes = useStyles();
-  log(user);
+  // log(user);
 
   let userAvatars = user.map((us) => {
     return (
@@ -59,7 +59,9 @@ function ItemCustomer({ time, logo, title, content, user }) {
           {/* card main */}
           {/* card main */}
           <div className={`${UtilStyles.card_main}`}>
-            <div className={`${UtilStyles.card_m_title}`}>{title}</div>
+            <a href="#" className={`${UtilStyles.card_m_title}`}>
+              {title}
+            </a>
             <div className={`${UtilStyles.card_m_content}`}>{content}</div>
           </div>
           {/* card footer */}
