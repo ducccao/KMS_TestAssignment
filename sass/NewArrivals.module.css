@@ -160,4 +160,29 @@
   background-color: #c2c8ce;
 }
 
+.green {
+  background-color: var(--color-nav);
+  border-radius: 8px;
+  color: white !important;
+}
+
+/* animation for New Arrivals Component*/
+/* this class is used to hidden the redundancy div */
+.d_none {
+  display: none;
+}
+
+.appear_1 {
+  animation: appear 0.8s forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /*# sourceMappingURL=NewArrivals.module.css.map */

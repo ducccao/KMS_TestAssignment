@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import UtilStyles from "./../../../../sass/NewArrivals.module.css";
-import { useState } from "react";
 import cn from "classnames";
+
 let log = console.log;
 
 // cannot use this way - find how to later
@@ -14,12 +14,12 @@ function HandleWeekClicked() {
 function HandleDayClicked() {
   log("day has been clicked!");
 }
-function isTimeFocus(value) {
-  return value;
-}
-
-function ControlNewArrivals({ setTime }) {
-  const [focus, setFocus] = useState(false);
+// how to set background of each time elements when it's all have been focus ?
+// -> Depend on it's type ['month','week','day'] and useState to set it!
+// default time = 'day'
+// great!
+function ControlNewArrivals({ time, setTime, setAppear, green, setGreen }) {
+  const [default_time, setDefaultTime] = useState("Day");
   return (
     <div className={UtilStyles.card_header}>
       <div className={UtilStyles.card_hd_left}>
@@ -31,32 +31,66 @@ function ControlNewArrivals({ setTime }) {
       <div className={UtilStyles.card_hd_right}>
         <div
           onClick={() => {
+            // clear default time
+            setDefaultTime("");
+
             setTime("Month");
-            setFocus(true);
+            setAppear(true);
+            // after that few sec clear appear
+            setTimeout(() => {
+              setAppear(false);
+            }, 500);
+
+            setGreen(true);
           }}
-          className={cn(
-            UtilStyles.btn,
-            UtilStyles.month,
-            ([UtilStyles.time_on_focus], { focus: true })
-          )}
+          className={cn(UtilStyles.btn, UtilStyles.month, {
+            [UtilStyles.green]:
+              green === true && time === "Month" && default_time === "",
+          })}
         >
+          {/* nice su!! great!! */}
           month
         </div>
         <div
           onClick={() => {
+            // clear default time
+            setDefaultTime("");
+
             setTime("Week");
-            setFocus(true);
+            setAppear(true);
+            // after that clear appear
+            setTimeout(() => {
+              setAppear(false);
+            }, 500);
+            setGreen(true);
           }}
-          className={`${UtilStyles.btn} ${UtilStyles.week}`}
+          className={cn(UtilStyles.btn, UtilStyles.week, {
+            [UtilStyles.green]:
+              green === true && time === "Week" && default_time === "",
+          })}
         >
           week
         </div>
         <div
           onClick={() => {
             setTime("Day");
-            setFocus(true);
+            setAppear(true);
+            // after that clear it
+            setTimeout(() => {
+              setAppear(false);
+            }, 500);
+            setGreen(true);
           }}
-          className={`${UtilStyles.btn} ` + UtilStyles.day}
+          className={cn(
+            UtilStyles.btn,
+            UtilStyles.day,
+            {
+              [UtilStyles.green]: green === true && time === "Day",
+            },
+            {
+              [UtilStyles.green]: default_time === "Day",
+            }
+          )}
         >
           day
         </div>
