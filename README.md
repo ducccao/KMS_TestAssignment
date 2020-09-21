@@ -10,7 +10,14 @@ sass - Writing sass's code <br/>
 src - Contain theme.tsx the file that used to custom CSS from React Material UI <br/>
 styles - Contain global.css <br/>
 
-### Another
+### API
+
+http://localhost:3000/api/customer <br/>
+http://localhost:3000/api/monthly-subscription <br/>
+http://localhost:3000/api/new-arrivals <br/>
+http://localhost:3000/api/weekly-sales-stats <br/>
+
+#### Another
 
 utils - Folder used to test some stuff <br/>
 bugs.txt - All problem that I met <br/>
