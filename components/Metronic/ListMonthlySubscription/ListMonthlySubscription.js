@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import UtilStyles from "./../../../sass/ItemMonthlySubscription.module.css";
 
 let log = console.log;
+// custom css
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -25,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// ListMonthlySubscription component
 function ListMonthlySubscription({ saasDatas }) {
   const classes = useStyles();
   // got it!

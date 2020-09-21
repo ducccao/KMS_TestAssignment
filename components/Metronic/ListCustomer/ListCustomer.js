@@ -2,10 +2,9 @@ import React from "react";
 import ItemCustomer from "./ItemCustomer/ItemCustomer";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import classnames from "classnames";
-import Axios from "axios";
 
 let log = console.log;
+// custom css
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -93,6 +92,7 @@ const datas = [
   },
 ];
 
+// ListCustomer component
 function ListCustomer({ listCustomerDatas }) {
   const classes = useStyles();
   // got it !!

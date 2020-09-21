@@ -1,6 +1,8 @@
 import React from "react";
 import cn from "classnames";
 import UtilStyles from "./../../../../../sass/Statistical.module.css";
+
+// ItemStatistical component
 function ItemStatistical({ total, name, img, bg, fill }) {
   return (
     <div className={cn(UtilStyles.card_ft_item)}>

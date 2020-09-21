@@ -8,9 +8,12 @@ import cn from "classnames";
 import Paper from "@material-ui/core/Paper";
 import UtilStyles from "./../../../sass/Statistical.module.css";
 
-
+// log it!
 let log = console.log;
-// custom styles
+
+// custom css
+// custom css
+// custom css
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -25,11 +28,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "cornflowerblue",
   },
 }));
-// statistical cpn
+
+// statistical component
+// statistical component
+// statistical component
 function Statistical({ weeklySalesStatsDatas }) {
   const classes = useStyles();
   const { total_sales, types } = weeklySalesStatsDatas;
   // log(total_sales, types);
+
+
+
   return (
     <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
       <Paper>

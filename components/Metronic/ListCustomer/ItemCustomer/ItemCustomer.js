@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import classnames from "classnames";
 import UtilStyles from "./../../../../less/ItemCustomer.module.css";
-import Button from "@material-ui/core/Button";
+
 
 let log = console.log;
 // custom Styles
@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// ItemCustomer component
 function ItemCustomer({ time, logo, title, content, user }) {
   const classes = useStyles();
   // log(user);

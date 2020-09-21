@@ -3,6 +3,7 @@ import ItemStatistical from "./ItemStatistical/ItemStatistical";
 import UtilStyles from "./../../../../sass/Statistical.module.css";
 import cn from "classnames";
 
+// ListStatistical component
 function ListStatistical({ types }) {
   const ItemStatisTicalComponents = types.map((t) => {
     return (

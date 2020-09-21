@@ -170,7 +170,7 @@
     justify-content: center;
     align-items: center;
 
-    #pc_60 {
+    .pc_60 {
       circle {
         stroke-dasharray: 520;
         stroke-dashoffset: 520;
@@ -188,7 +188,7 @@
         }
       }
 
-      #pc_50 {
+      .pc_50 {
         circle {
           stroke-dasharray: 410;
           stroke-dashoffset: 410;
@@ -206,7 +206,7 @@
             stroke: rgba(246, 78, 96, 0.55);
           }
         }
-        #pc_75 {
+        .pc_75 {
           circle {
             stroke-dasharray: 320;
             stroke-dashoffset: 320;
@@ -224,7 +224,7 @@
               stroke: rgba(27, 197, 189, 0.55);
             }
           }
-          #pc_80 {
+          .pc_80 {
             circle {
               stroke-dasharray: 220;
               stroke-dashoffset: 220;

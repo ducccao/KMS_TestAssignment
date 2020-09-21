@@ -7,6 +7,7 @@ import UtilStyles from "./../../../../sass/ItemMonthlySubscription.module.css";
 import LinearProgress from "@material-ui/core/LinearProgress";
 let log = console.log;
 
+// custom css
 const useStyles = makeStyles((theme) => ({
   root: {},
   paper: {
@@ -29,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// ItemMonthlySubscription component
+// ItemMonthlySubscription component
+// ItemMonthlySubscription component
 function ItemMonthlySubscription({ logo, bg, progress_bg, team }) {
   const classes = useStyles();
   // log(UtilStyles);
@@ -45,6 +49,9 @@ function ItemMonthlySubscription({ logo, bg, progress_bg, team }) {
     );
   });
 
+  // custom LinearProgress
+  // custom LinearProgress
+  // custom LinearProgress
   const BorderLinearProgress = withStyles((theme) => ({
     root: {
       height: 7,
