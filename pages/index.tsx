@@ -1,4 +1,5 @@
-import Metronic from "./../components/Metronic/Metronic";
+import Metronic from "../components/Metronic/Metronic";
+import { GetStaticProps } from "next";
 let log = console.log;
 
 export default function Home({
@@ -7,8 +8,6 @@ export default function Home({
   arrivalsDatas,
   weeklySalesStatsDatas,
 }) {
-  // got it !
-  // log(datas);
   return (
     <div>
       <Metronic
@@ -22,7 +21,8 @@ export default function Home({
 }
 
 //
-export async function getStaticProps() {
+
+export const getStaticProps: GetStaticProps = async (context) => {
   // monthly subscription api
   const saas_api = await fetch(
     "http://localhost:3000/api/monthly-subscription"
@@ -51,4 +51,4 @@ export async function getStaticProps() {
       weeklySalesStatsDatas,
     },
   };
-}
+};

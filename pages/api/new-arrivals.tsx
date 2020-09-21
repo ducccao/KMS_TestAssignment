@@ -1,3 +1,5 @@
+import { NextApiRequest, NextApiResponse } from "next";
+
 let log = console.log;
 const pure_url = "https://preview.keenthemes.com/";
 function virtualRandomData() {
@@ -60,7 +62,7 @@ function virtualRandomData() {
   return data;
 }
 
-export default (req, res) => {
+export default (req: NextApiRequest, res: NextApiResponse) => {
   res.statusCode = 200;
 
   const arrivals_datas = [

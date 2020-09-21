@@ -1,4 +1,6 @@
-export default (req, res) => {
+import { NextApiRequest, NextApiResponse } from "next";
+
+export default (req: NextApiRequest, res: NextApiResponse) => {
   let pure_url = "https://preview.keenthemes.com/";
   let datas = [
     {

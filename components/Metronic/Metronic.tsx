@@ -16,19 +16,19 @@ const useStyles = makeStyles((theme) => ({
   },
 
   nav: {
-    backgroundColor: theme.color.nav,
+    backgroundColor: "#0bb783",
     height: 80,
     width: "100%",
     position: "fixed",
     top: 0,
     left: 0,
-    padding: theme.wrap_spacing.pd,
+    padding: "0vh 8vw",
     zIndex: 1,
   },
 
   main: {
     minHeight: "100vh",
-    padding: theme.wrap_spacing.pd,
+    padding: "0vh 8vw",
     paddingTop: 50,
     paddingBottom: 50,
     backgroundColor: "var(--color-bg)",
@@ -41,14 +41,14 @@ const useStyles = makeStyles((theme) => ({
   },
   do_not_required: {
     height: 500,
-    backgroundColor: theme.color.bg,
+    backgroundColor: "var(--color-bg)",
     color: "red",
   },
 
   footer: {
     backgroundColor: "white",
     height: 80,
-    padding: theme.wrap_spacing.pd,
+    padding: "0vh 8vw",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
