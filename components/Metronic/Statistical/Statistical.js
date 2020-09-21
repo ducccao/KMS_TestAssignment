@@ -8,6 +8,7 @@ import cn from "classnames";
 import Paper from "@material-ui/core/Paper";
 import UtilStyles from "./../../../sass/Statistical.module.css";
 
+
 let log = console.log;
 // custom styles
 const useStyles = makeStyles((theme) => ({

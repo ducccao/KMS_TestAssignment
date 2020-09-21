@@ -1,3 +1,6 @@
+/* pure css */
+/* pure css */
+/* pure css */
 :root {
   --color-title: #141414;
   --color-nav: #0bb783;
@@ -6,6 +9,7 @@
   --color-user-type-2: #c9f7f5;
   --color-user-type-3: #d7f9ef;
   --color-user-type-4: #f3f6f9;
+  --progress-percent-1: 65;
 }
 
 * {
@@ -24,3 +28,21 @@ a {
   color: unset;
 }
 
+/* chart css */
+/* chart css */
+/* chart css */
+.number {
+  position: absolute;
+  top: 51%;
+  left: 52%;
+  transform: translate(-52%, -52%);
+  color: var(--color-title);
+  content: "22";
+}
+
+.number h2 {
+  font-size: 20px;
+}
+.number h2 span {
+  font-size: 20px;
+}

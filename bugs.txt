@@ -22,3 +22,10 @@
 - set up default btn by setState
 - setState - set bg
 - conditional classnames
+
+8. How to make an circular progress bar ?
+- youtube
+- svg, g
+
+9. Cannot use document, window with NextJS 
+- server rendering mode - the document is undefined

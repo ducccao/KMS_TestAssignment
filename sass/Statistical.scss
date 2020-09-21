@@ -73,10 +73,9 @@
     background-color: plum;
     @include flexCenter();
     .chart {
-      height: 200px;
-      width: 200px;
+      height: 100%;
+      width: 100%;
       background-color: saddlebrown;
-      position: relative;
     }
   }
   // card footer
@@ -128,6 +127,122 @@
           font-weight: 500;
           color: #b5b5c3 !important;
           font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+/* chart css */
+/* chart css */
+/* chart css */
+.box {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+
+  svg {
+    width: 185px;
+    height: 185px;
+  }
+  circle {
+    stroke-linecap: round;
+    position: relative;
+    z-index: 2;
+    transform: translate(15px, -10px) rotate(-90deg);
+    transform-origin: center;
+    width: 170px;
+    height: 170px;
+    fill: none;
+    stroke-width: 9;
+    stroke: #000;
+  }
+  .percent {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #pc_60 {
+      circle {
+        stroke-dasharray: 520;
+        stroke-dashoffset: 520;
+
+        &:nth-child(1) {
+          stroke-dashoffset: 0;
+          stroke: #f3f3f3;
+        }
+        &:nth-child(2) {
+          stroke-dashoffset: calc(520 - (520 * 60 / 100));
+          stroke: rgba(137, 80, 252, 0.85);
+        }
+        &:nth-child(2):hover {
+          stroke: rgba(137, 80, 252, 0.55);
+        }
+      }
+
+      #pc_50 {
+        circle {
+          stroke-dasharray: 410;
+          stroke-dashoffset: 410;
+          stroke: rgba(246, 78, 96, 0.85);
+
+          &:nth-child(1) {
+            stroke-dashoffset: 0;
+            stroke: #f3f3f3;
+          }
+          &:nth-child(2) {
+            stroke-dashoffset: calc(410 - (410 * 50 / 100));
+            stroke: rgba(246, 78, 96, 0.85);
+          }
+          &:nth-child(2):hover {
+            stroke: rgba(246, 78, 96, 0.55);
+          }
+        }
+        #pc_75 {
+          circle {
+            stroke-dasharray: 320;
+            stroke-dashoffset: 320;
+            stroke: rgba(27, 197, 189, 0.85);
+
+            &:nth-child(1) {
+              stroke-dashoffset: 0;
+              stroke: #f3f3f3;
+            }
+            &:nth-child(2) {
+              stroke-dashoffset: calc(320 - (320 * 75 / 100));
+              stroke: rgba(27, 197, 189, 0.85);
+            }
+            &:nth-child(2):hover {
+              stroke: rgba(27, 197, 189, 0.55);
+            }
+          }
+          #pc_80 {
+            circle {
+              stroke-dasharray: 220;
+              stroke-dashoffset: 220;
+              stroke: rgba(11, 183, 131, 0.85);
+
+              &:nth-child(1) {
+                stroke-dashoffset: 0;
+                stroke: #f3f3f3;
+              }
+              &:nth-child(2) {
+                stroke-dashoffset: calc(220 - (220 * 80 / 100));
+                stroke: rgba(11, 183, 131, 0.85);
+              }
+              &:nth-child(2):hover {
+                stroke: rgba(11, 183, 131, 0.55);
+              }
+            }
+          }
         }
       }
     }
