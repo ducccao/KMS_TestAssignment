@@ -18,14 +18,15 @@
 - setTimeout, setState
 - keyframe
 
-7. How to change background of list btn when it was focused ?
+7. How to change background of list btn when each of it was focused ?
 - set up default btn by setState
 - setState - set bg
 - conditional classnames
 
 8. How to make an circular progress bar ?
 - youtube
-- svg, g
+- svg tag, g tag
+- useState 
 
 9. Cannot use document, window with NextJS 
 - server rendering mode - the document is undefined
