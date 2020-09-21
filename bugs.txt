@@ -29,3 +29,4 @@
 
 9. Cannot use document, window with NextJS 
 - server rendering mode - the document is undefined
+- this is react not only javascript so stop doing stupid thing ))

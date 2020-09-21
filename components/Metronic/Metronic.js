@@ -6,10 +6,10 @@ import ListCustomer from "./ListCustomer/ListCustomer";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import cn from "classnames";
-import { lightBlue } from "@material-ui/core/colors";
 
 let log = console.log;
 
+// custom css
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.wrap_spacing.pd,
     paddingTop: 50,
     paddingBottom: 50,
-    backgroundColor: "lightskyblue",
+    backgroundColor: "var(--color-bg)",
   },
   mb_20: {
     marginBottom: 20,
@@ -47,11 +47,43 @@ const useStyles = makeStyles((theme) => ({
 
   footer: {
     backgroundColor: "white",
-    height: 60,
+    height: 80,
     padding: theme.wrap_spacing.pd,
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  author: {
+    color: "var(--color-title)",
+    fontWeight: 500,
+    transition: "0.13s",
+    "&:hover": {
+      color: "var(--color-nav)",
+    },
+  },
+  f_left: {},
+  f_right: {
+    width: "15%",
+  },
+  f_link_wrap: {
+    height: "100%",
+    width: "100%",
+    display: "flex",
+    justifyContent: "space-between",
+  },
+  f_link: {
+    cursor: "pointer",
+    textTransform: "capitalize",
+    fontWeight: 500,
+    color: "#7E8299",
+    transition: "0.13s",
+    "&:hover": {
+      color: "var(--color-nav)",
+    },
   },
 }));
 
+// Metronic component
 function Metronic({
   listCustomerDatas,
   saasDatas,
@@ -74,9 +106,7 @@ function Metronic({
         lg={12}
         xl={12}
         className={cn(classes.nav)}
-      >
-        header here
-      </Grid>
+      ></Grid>
 
       <Grid
         item
@@ -134,18 +164,40 @@ function Metronic({
       {/* footer */}
       {/* footer */}
       {/* footer */}
-      <Grid
-        item
-        xs={12}
-        sm={12}
-        md={12}
-        lg={12}
-        xl={12}
-        className={cn(classes.footer)}
-      >
-        <footer>
-          {/* <div className={GlobalCSS.foot_left}></div>
-          <div className={GlobalCSS.foot_right}></div> */}
+      <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+        <footer className={classes.footer}>
+          <div className={classes.f_left}>
+            2020©{"    "}
+            <a
+              className={classes.author}
+              href="http://keenthemes.com/metronic"
+              target="_blank"
+            >
+              Keenthemes
+            </a>
+          </div>
+          <div className={classes.f_right}>
+            <div className={classes.f_link_wrap}>
+              <div className={classes.f_link}>
+                <a target="_blank" href="http://keenthemes.com/metronic">
+                  {" "}
+                  about
+                </a>
+              </div>
+              <div className={classes.f_link}>
+                <a target="_blank" href="https://keenthemes.com/metronic/">
+                  {" "}
+                  team
+                </a>
+              </div>
+              <div className={classes.f_link}>
+                <a href="https://keenthemes.com/metronic/" target="_blank">
+                  {" "}
+                  contact
+                </a>
+              </div>
+            </div>
+          </div>
         </footer>
       </Grid>
     </Grid>
