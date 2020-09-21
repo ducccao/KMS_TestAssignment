@@ -2,18 +2,18 @@
 
 ## Core Folder and purpose
 
-components - contains all components
-less - Writing less's code
-pages - Routing and API
-public - Contains images
-sass - Writing sass's code
-src - Contain theme.tsx the file that used to custom CSS from React Material UI
-styles - Contain global.css
+components - contains all components <br/>
+less - Writing less's code <br/>
+pages - Routing and API <br/>
+public - Contains images <br/>
+sass - Writing sass's code <br/>
+src - Contain theme.tsx the file that used to custom CSS from React Material UI <br/>
+styles - Contain global.css <br/>
 
 ### Another
 
-utils - Folder used to test some stuff
-bugs.txt - All problem that I met
-components remnants - Break the UI into A Component Hierarchy
+utils - Folder used to test some stuff <br/>
+bugs.txt - All problem that I met <br/>
+components remnants - Break the UI into A Component Hierarchy <br/>
 
 ![Drag Racing](components_remnants.jpg)
